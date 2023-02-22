@@ -1,0 +1,33 @@
+body {
+    background: rgb(195, 130, 83);
+
+}
+
+#header {
+    background: linear-gradient(to right, rgb(219, 163, 148), rgb(3, 2, 0));
+    color: rgb(33, 15, 7);
+}
+
+#main {
+    display: flex;
+    justify-content: left
+}
+
+#five-days {
+    display: flex;
+    
+}
+
+button,
+input {
+    width: 100%;
+}
+
+#search {
+    background-color: rgb(194, 141, 95);
+    color: rgb(0, 0, 0);
+}
+
+#border {
+    border: solid rgb(200, 119, 26);
+}

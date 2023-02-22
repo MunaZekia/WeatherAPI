@@ -25,7 +25,7 @@ async function getCoordinates(city) {
     var lon
     let cityName=city||document.querySelector("#city").value
     document.querySelector("#city").value=""
-    const coordinatesURL= `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apikey}`
+    const coordinatesURL= `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apikey}`
     await fetch(coordinatesURL)
         .then(res=>res.json())
         .then(res=>{
@@ -48,7 +48,7 @@ function getCurrentWeather([lat,lon]){
             var icon= res.weather[0].icon
             document.getElementById("current").innerHTML=`
             <div id= "border">
-                <h2>${name} ${date} <img src="http://openweathermap.org/img/wn/${icon}@2x.png"></h2>
+                <h2>${name} ${date} <img src="https://openweathermap.org/img/wn/${icon}@2x.png"></h2>
                 <p>Temp: ${temp} °F</p>
                 <p>Wind: ${wind} MPH</p>
                 <p>Humidity:${humidity} %</p>
@@ -78,7 +78,7 @@ function fiveDayWeather([lat,lon]){
                 <div class= "card">
                     <div class= "date">${new Date(dateText).toLocaleDateString()}
                     </div> 
-                    <img class = "icon" src="http://openweathermap.org/img/wn/${icon}@2x.png">
+                    <img class = "icon" src="https://openweathermap.org/img/wn/${icon}@2x.png">
                     <p class= "temp"> Temp:${temperature} °F</p>
                     <p class="wind">Wind:${windSpeed} MPH</p>
                     <p class="humidity">Humidity:${humidity} %</p>
